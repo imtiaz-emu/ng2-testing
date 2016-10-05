@@ -3,15 +3,20 @@
     <div class="jumbotron">
       <form class="form-inline">
         <div class="form-group">
-          <label for="exampleInputName2">Title:</label>
-          <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+          <label for="exampleInputName2">Movie Name:</label>
+          <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe" name="name" #newname>
         </div>
         <div class="form-group">
           <label for="exampleInputEmail2">Link:</label>
-          <input type="text" class="form-control" id="exampleInputEmail2" placeholder="www.fb.com">
+          <input type="text" class="form-control" id="exampleInputEmail2" placeholder="www.fb.com" name="link" #newlink>
         </div>
-        <button (click)="addArticle()" type="button" class="btn btn-default">Submit link</button>
+        <button (click)="addMovie(newname, newlink)" type="button" class="btn btn-default">Submit link</button>
       </form>
     </div>
   </div>
+</div>
+
+<div class="movies">
+  <app-movie>
+  </app-movie>
 </div>

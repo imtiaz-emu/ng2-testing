@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col-md-offset-2 col-md-8">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <a href="{{ movie.link }}">
+          {{ movie.name }}
+        </a>
+      </div>
+      <div class="panel-body">
+        {{ movie.votes }} points
+      </div>
+      <div class="panel-footer">
+        <a href (click)="voteUp()">
+          <i class="glyphicon glyphicon-chevron-up"></i>
+          UpVote
+        </a>
+        <a href (click)="voteDown()">
+          <i class="glyphicon glyphicon-chevron-down"></i>
+          DownVote
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
