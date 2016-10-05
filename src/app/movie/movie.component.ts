@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
 import {Movie} from "./movie.model";
 
 @Component({
@@ -8,13 +8,7 @@ import {Movie} from "./movie.model";
 })
 export class MovieComponent implements OnInit {
 
-  movie: Movie;
-
-  constructor() {
-    this.movie = new Movie('Cinema Paradiso',
-      'http://www.imdb.com/title/tt0095765',
-      10)
-  }
+  @Input() movie: Movie;
 
   voteUp(): boolean {
     this.movie.voteUp();
