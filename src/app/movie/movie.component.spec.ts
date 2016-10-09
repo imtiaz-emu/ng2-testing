@@ -2,10 +2,17 @@
 
 import { TestBed, async } from '@angular/core/testing';
 import { MovieComponent } from './movie.component';
+import {AppComponent} from "../app.component";
 
-describe('Component: Movie', () => {
-  it('should create an instance', () => {
-    let component = new MovieComponent();
-    expect(component).toBeTruthy();
+
+describe('MovieComponent', () => {
+
+  beforeEach(() => {
+    this.movie = new MovieComponent();
   });
+
+  it('should have name property', () => {
+    expect(this.movie.title).toBe('Hi Lol');
+  });
+
 });

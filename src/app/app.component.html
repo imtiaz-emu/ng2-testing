@@ -1,16 +1,16 @@
 <div class="row">
   <div class="col-md-offset-2 col-md-8">
-    <div class="jumbotron">
-      <form class="form-inline">
+    <div class="jumbotron" >
+      <form class="form-inline" [formGroup] = "movieForm" (ngSubmit) = "addMovie(movieForm.value)" >
         <div class="form-group">
           <label for="exampleInputName2">Movie Name:</label>
-          <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe" name="name" #newname>
+          <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe" name="name" formControlName="name">
         </div>
         <div class="form-group">
           <label for="exampleInputEmail2">IMDb Link:</label>
-          <input type="text" class="form-control" id="exampleInputEmail2" placeholder="www.fb.com" name="link" #newlink>
+          <input type="text" class="form-control" id="exampleInputEmail2" placeholder="www.fb.com" name="link" formControlName="link">
         </div>
-        <button (click)="addMovie(newname, newlink)" type="button" class="btn btn-default">Submit link</button>
+        <button type="submit" class="btn btn-default">Submit link</button>
       </form>
     </div>
   </div>

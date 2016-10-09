@@ -9,6 +9,7 @@ import {Movie} from "./movie.model";
 export class MovieComponent implements OnInit {
 
   @Input() movie: Movie;
+  public title = "Hi Lol";
 
   voteUp(): boolean {
     this.movie.voteUp();
