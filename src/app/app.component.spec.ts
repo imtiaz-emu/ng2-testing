@@ -4,6 +4,7 @@ import {TestBed, async} from '@angular/core/testing';
 import {AppComponent} from './app.component';
 import {Movie} from "./movie/movie.model";
 import {FormBuilder, FormGroup, ReactiveFormsModule} from "@angular/forms";
+import {MovieComponent} from "./movie/movie.component";
 
 describe('AppComponent', () => {
 
@@ -12,7 +13,7 @@ describe('AppComponent', () => {
     // this.movieForm = FormGroup;
     TestBed.configureTestingModule({
       imports: [ReactiveFormsModule],
-      declarations: [ AppComponent ]
+      declarations: [AppComponent, MovieComponent]
     });
   });
 
@@ -35,7 +36,7 @@ describe('AppComponent', () => {
     let input2 = compiled.querySelector('#exampleInputEmail2');
     input.value = 'Test Movie';
     input2.value = 'http://www.imdb.com/title/tt0095705';
-    compiled.querySelector('.btn-default').triggerEventHandler('click', null);
+    compiled.querySelector('#submit-btn').click();
 
     expect(this.appComponent.movies.length).toEqual(3);
   });
